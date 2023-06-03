@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToAdmin()" ><ion-icon color="dark" name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Tambah Kandidat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card> 
+    <ion-item>
+      <ion-input
+        label="Nama"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Masukan nama"
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Kelas"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Masukan kelas"
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Visi"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Masukan visi"
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Misi"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Masukan Misi"
+      >
+      </ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-button class="pilih" color="primary"> Tambah </ion-button>
+  <ion-button class="pilih" color="danger"> Selesai </ion-button>
+  
+</ion-content>
