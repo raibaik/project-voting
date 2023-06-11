@@ -6,9 +6,26 @@ import { Router } from '@angular/router';
   templateUrl: './add-peserta.page.html',
   styleUrls: ['./add-peserta.page.scss'],
 })
-export class AddPesertaPage {
+export class AddPesertaPage implements OnInit {
 
-  constructor(private router: Router) { }
+  form = {
+    nama = '',
+    nim = '',
+    kelas = '',
+    prodi = '',
+    password = '',
+    role = '',
+    voting = '',
+  }
+
+  constructor(
+    private router: Router
+    ) { }
+
+  doAddPeserta() {
+    this.data
+  }
+    
 
   goToAdmin() {
     this.router.navigate(['/dasboard']);

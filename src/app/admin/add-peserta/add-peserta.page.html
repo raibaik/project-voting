@@ -2,7 +2,9 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="goToAdmin()" ><ion-icon color="dark" name="arrow-back-outline"></ion-icon></ion-button>
+      
     </ion-buttons>
+    <ion-title>Tambah Peserta</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +15,7 @@
         label="Nama"
         labelPlacement="stacked"
         [clearOnEdit]="true"
-        placeholder="Masukan nama kandidat"
+        placeholder=""
       >
       </ion-input>
     </ion-item>
@@ -22,7 +24,7 @@
         label="NIM"
         labelPlacement="stacked"
         [clearOnEdit]="true"
-        placeholder="Masukan kelas kandidat"
+        placeholder=""
       >
       </ion-input>
     </ion-item>
@@ -31,7 +33,7 @@
         label="Kelas"
         labelPlacement="stacked"
         [clearOnEdit]="true"
-        placeholder="Masukan visi & misi"
+        placeholder=""
       >
       </ion-input>
     </ion-item>
@@ -40,7 +42,7 @@
         label="Program Studi"
         labelPlacement="stacked"
         [clearOnEdit]="true"
-        placeholder="Masukan visi & misi"
+        placeholder=""
       >
       </ion-input>
     </ion-item>
@@ -49,7 +51,27 @@
         label="Password"
         labelPlacement="stacked"
         [clearOnEdit]="true"
-        placeholder="Masukan visi & misi"
+        placeholder=""
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Role"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder=""
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Voting"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder=""
       >
       </ion-input>
     </ion-item>

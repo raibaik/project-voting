@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,20 +15,64 @@ export class LoginPage{
     password: ''  
   }
 
-  constructor(private router: Router) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private toastController: ToastController
+
+    ) {}
+
+  inputCheck() {
+    if (this.form.nim == '' || this.form.password == '') {
+      this.toastController.create({
+        message: 'NIM dan Password tidak boleh kosong!',
+        duration: 2000,
+        color: 'danger'
+      }).then(toast => toast.present());
+
+      return false;
+    } 
+
+    return true;
+  }
 
   startHome() {
     this.router.navigate(['/voting']);
   }
 
   doLogin() {
-    localStorage.setItem('nim', this.form.nim);
-    localStorage.setItem('password', this.form.password);
+    const check = this.inputCheck();
+    if (!check) {
+      return;
+    }
 
-    this.router.navigate(['/user']);
+    let data: any;
+    this.authService.login(this.form.nim, this.form.password);
+    this.authService.data.subscribe((res: any) => data = res);
+
+    if (data.data.role == 'admin') {
+      this.router.navigateByUrl('/dasboard');
+    } else if (data.data.role == 'user') {
+      this.router.navigateByUrl('/user');
+    }
+    
+    
+    //data.role == 'admin' ? this.router.navigateByUrl('/user') : this.router.navigateByUrl('/dasboard');
+
+
+    setTimeout(() => {
+     localStorage.setItem('nim', data.data.nim);
+     localStorage.setItem('role', data.data.role);
+     localStorage.setItem('token', data.token);
+     console.log(data);
+    
+
+  }, 1500);
+  
+
+
   }
-
-}
+}  
 // import { Component, OnInit } from '@angular/core';
 // import { Router } from '@angular/router';
 
@@ -51,4 +97,3 @@ export class LoginPage{
 //       this.router.navigate(['/home']);
 //     }
 //   }
-// }

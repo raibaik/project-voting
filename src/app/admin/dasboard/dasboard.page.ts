@@ -6,9 +6,18 @@ import { Router } from '@angular/router';
   templateUrl: './dasboard.page.html',
   styleUrls: ['./dasboard.page.scss'],
 })
-export class DasboardPage {
-
+export class DasboardPage implements OnInit{
+data: any;
   constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.data = {
+      nim: localStorage.getItem('nim'),
+      role: localStorage.getItem('role'),
+      token: localStorage.getItem('token')
+    }
+  }
+    
 
   addKandidat() {
     this.router.navigate(['/add']);
@@ -22,5 +31,14 @@ export class DasboardPage {
   AddPeserta() {
     this.router.navigate(['/add-peserta']);
   }
+
+  doLogout() {
+    localStorage.removeItem('nim');
+    localStorage.removeItem('role');
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
+
+
 
 }
