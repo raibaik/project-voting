@@ -11,11 +11,12 @@
 <ion-content>
   <ion-card> 
     <ion-item>
-      <ion-input
+      <ion-input 
         label="Nama"
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.nama" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
@@ -25,6 +26,7 @@
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.nim" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
@@ -34,6 +36,7 @@
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.kelas" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
@@ -43,6 +46,7 @@
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.prodi" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
@@ -52,6 +56,7 @@
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.password" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
@@ -62,6 +67,7 @@
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.role" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
@@ -72,12 +78,13 @@
         labelPlacement="stacked"
         [clearOnEdit]="true"
         placeholder=""
+        [(ngModel)]="form.voting" [ngModelOptions]="{standalone: true}"
       >
       </ion-input>
     </ion-item>
   </ion-card>
 
-  <ion-button class="pilih" color="primary"> Tambah </ion-button>
-  <ion-button class="pilih" color="danger"> Selesai </ion-button>
+  <ion-button class="pilih" color="primary" (click)="doAddPeserta()"> Tambah </ion-button>
+  <ion-button class="pilih" color="danger" (click)="goToDashboard()"> Selesai </ion-button>
   
 </ion-content>

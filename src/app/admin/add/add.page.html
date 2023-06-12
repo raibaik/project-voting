@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="goToAdmin()" ><ion-icon color="dark" name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button ><ion-icon color="dark" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     <ion-title>Tambah Kandidat</ion-title>
   </ion-toolbar>
@@ -9,45 +9,27 @@
 
 <ion-content>
   <ion-card> 
+    <form >
+      <ion-item>
+        <ion-input label="Nama" formControlName="nama" type="text" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Kelas" formControlName="kelas" type="text" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="VIsi" formControlName="visi" type="text" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Misi" formControlName="misi" type="text" labelPlacement="floating"></ion-input>
+      </ion-item>
+    </form>
     <ion-item>
-      <ion-input
-        label="Nama"
-        labelPlacement="stacked"
-        [clearOnEdit]="true"
-        placeholder="Masukan nama"
-      >
-      </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input
-        label="Kelas"
-        labelPlacement="stacked"
-        [clearOnEdit]="true"
-        placeholder="Masukan kelas"
-      >
-      </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input
-        label="Visi"
-        labelPlacement="stacked"
-        [clearOnEdit]="true"
-        placeholder="Masukan visi"
-      >
-      </ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input
-        label="Misi"
-        labelPlacement="stacked"
-        [clearOnEdit]="true"
-        placeholder="Masukan Misi"
-      >
-      </ion-input>
+      <ion-label>Upload Foto</ion-label>
+      <ion-button fill="outline" slot="end">Pilih</ion-button>
     </ion-item>
   </ion-card>
 
-  <ion-button class="pilih" color="primary"> Tambah </ion-button>
+  <ion-button class="pilih" color="primary" > Tambah </ion-button>
   <ion-button class="pilih" color="danger"> Selesai </ion-button>
   
 </ion-content>

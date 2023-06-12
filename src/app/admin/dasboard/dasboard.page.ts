@@ -12,6 +12,7 @@ data: any;
 
   ngOnInit() {
     this.data = {
+      nama: localStorage.getItem('nama'),
       nim: localStorage.getItem('nim'),
       role: localStorage.getItem('role'),
       token: localStorage.getItem('token')
