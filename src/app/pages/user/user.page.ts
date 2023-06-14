@@ -15,7 +15,11 @@ export class UserPage   implements OnInit {
     this.data = {
       nim: localStorage.getItem('nim'),
       role: localStorage.getItem('role'),
-      token: localStorage.getItem('token')
+      token: localStorage.getItem('token'),
+      nama: localStorage.getItem('nama'),
+      kelas: localStorage.getItem('kelas'),
+      prodi: localStorage.getItem('prodi')
+
     }
   }
 
@@ -27,6 +31,9 @@ export class UserPage   implements OnInit {
     localStorage.removeItem('nim');
     localStorage.removeItem('role');
     localStorage.removeItem('token');
+    localStorage.removeItem('nama');
+    localStorage.removeItem('kelas');
+    localStorage.removeItem('prodi');
     this.router.navigate(['/login']);
   }
 

@@ -1,16 +1,18 @@
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
     
       <ion-toolbar>
-        <ion-buttons  slot="start">
-          <ion-button (click)="goToProfile()">Profil</ion-button>
-
-        </ion-buttons>
+       
+        <ion-item lines="none">
+          <ion-buttons>
+            <ion-button (click)="goToProfile()">Profil</ion-button>
+          </ion-buttons>
+        </ion-item>
         
       </ion-toolbar>
     
@@ -25,21 +27,31 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>{{data.nama}}</ion-title>
+      <ion-title></ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <ion-grid>
-      <ion-row>
-       <ion-col size="6">
-        <ion-button expand="full" (click)="goToVotings()" >VOTING</ion-button>
-       </ion-col>
-       <ion-col size="6">
-        <ion-button expand="full" (click)="goToResult()" >RESULT</ion-button>
-       </ion-col>
-      </ion-row>
-     </ion-grid>
-    <ion-content class="ion-padding">  
+      <ion-content class="ion-padding">
+        <ion-header>
+          <ion-item lines="none">
+            <h2>Hallo, {{ data.nama }} !</h2>
+          </ion-item>
+            <ion-img src="assets/icon/logopanjang.png" class="logo"></ion-img>
+          
+        </ion-header>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <ion-button class="btn" name="key" expand="full"(click)="goToVotings()" >Voting</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <ion-button class="btn" name="key" expand="full"(click)="goToVotings()" >Hasil Voting</ion-button>
+            </ion-col>
+          </ion-row>
+         </ion-grid>
+        <ion-content class="ion-padding"> 
+
     <div class="logout-button">
       
     </div>

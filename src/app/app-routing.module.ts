@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'voting',
+    redirectTo: '/voting',
     pathMatch: 'full',
   },
   {
@@ -42,32 +42,32 @@ const routes: Routes = [
     loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule)
   },
   {
-    path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
-  },
-  {
-    path: 'add',
-    loadChildren: () => import('./admin/add/add.module').then( m => m.AddPageModule)
-  },
-  {
-    path: 'edit',
-    loadChildren: () => import('./admin/edit/edit.module').then( m => m.EditPageModule)
-  },
-  {
-    path: 'delete',
-    loadChildren: () => import('./admin/delete/delete.module').then( m => m.DeletePageModule)
-  },
-  {
-    path: 'add-peserta',
-    loadChildren: () => import('./admin/add-peserta/add-peserta.module').then( m => m.AddPesertaPageModule)
-  },
-  {
-    path: 'input',
-    loadChildren: () => import('./admin/input/input.module').then( m => m.InputPageModule)
-  },
-  {
     path: 'dasboard',
-    loadChildren: () => import('./admin/dasboard/dasboard.module').then( m => m.DasboardPageModule)
+    loadChildren: () => import('./pages/dasboard/dasboard.module').then( m => m.DasboardPageModule)
+  },
+  {
+    path: 'list-peserta',
+    loadChildren: () => import('./pages/list-peserta/list-peserta.module').then( m => m.ListPesertaPageModule)
+  },
+  {
+    path: 'create-peserta',
+    loadChildren: () => import('./pages/create-peserta/create-peserta.module').then( m => m.CreatePesertaPageModule)
+  },
+  {
+    path: 'create-candidat',
+    loadChildren: () => import('./pages/create-candidat/create-candidat.module').then( m => m.CreateCandidatPageModule)
+  },
+  { 
+    path: 'list-candidat',
+    loadChildren: () => import('./pages/list-candidat/list-candidat.module').then( m => m.ListCandidatPageModule)
+  },
+  {
+    path: 'update-candidat',
+    loadChildren: () => import('./pages/update-candidat/update-candidat.module').then( m => m.UpdateCandidatPageModule)
+  },
+  {
+    path: 'update-peserta',
+    loadChildren: () => import('./pages/update-peserta/update-peserta.module').then( m => m.UpdatePesertaPageModule)
   },
 ];
 

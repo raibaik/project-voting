@@ -1,0 +1,43 @@
+<ion-menu contentId="main-content">
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="doLogout()"><ion-icon  color="dark" name="log-in-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-title> ADMIN </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-header>
+      
+        <ion-img src="assets/icon/logopanjang.png" class="logo"></ion-img>
+      
+    </ion-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-button class="btn"  routerLink="/create-candidat" name="key" expand="full">Tambah Kandidat</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-button class="btn" routerLink="/create-peserta"  name="key" expand="full">Tambah Peserta</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-button class="btn" routerLink="/list-candidat" name="key" expand="full">Lihat Kandidat</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-button class="btn" routerLink="/list-peserta" name="key" expand="full">Lihat Peserta</ion-button>
+        </ion-col>
+      </ion-row>
+     </ion-grid>
+    <ion-content class="ion-padding">  
+    <div class="logout-button">
+      
+    </div>

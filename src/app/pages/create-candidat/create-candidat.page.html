@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/dasboard" ><ion-icon color="dark" name="arrow-back-outline"></ion-icon></ion-button>
+      
+    </ion-buttons>
+    <ion-title>Tambah Peserta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content> 
+    <ion-list lines="full">
+      <ion-item>
+        <ion-input label="Nama" label-placement="floating" fill="fill" placeholder="Enter text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Visi" label-placement="floating" fill="fill" placeholder="Enter text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Misi" label-placement="floating" fill="fill" placeholder="Enter text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Foto" label-placement="" type="file" fill="fill" placeholder="Enter text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Voting" label-placement="floating" fill="fill" placeholder="Enter text"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <ion-button class="btn"  routerLink="/create-candidat" name="key" expand="full">Tambah</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <ion-button routerLink="/dasboard" color="danger" name="key" expand="full">Selesai</ion-button>
+    </ion-col>
+  </ion-row>
+  </ion-card>
+  
+</ion-content>

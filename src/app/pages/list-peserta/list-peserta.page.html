@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/dasboard" ><ion-icon color="dark" name="arrow-back-outline"></ion-icon></ion-button>
+      
+    </ion-buttons>
+    <ion-title>Data Peserta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let key of dataPeserta">
+        <ion-item>
+         <ion-label>{{ key.nama }}</ion-label>
+         <ion-buttons slot="end">
+           <ion-button (click)="updatePeserta()"><ion-icon  name="create-outline" color="dark"></ion-icon></ion-button>
+           <ion-button><ion-icon name="trash-outline" color="dark"></ion-icon></ion-button>
+        </ion-buttons>
+         
+
+        </ion-item>
+        </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
